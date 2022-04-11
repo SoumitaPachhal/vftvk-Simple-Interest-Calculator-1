@@ -1,9 +1,13 @@
      function compute()
 {
-    p = document.getElementById("principal").value;
-    t = document.getElementById("number").value;
-    r = document.getElementById("rate").value;
- Interest=(p*t*r)/100;
+   var p = parseInt(document.getElementById("principal").value);
+    var t = parseInt(document.getElementById("years").value);
+    var r = parseInt(document.getElementById("rate").value);
+ var interest=(p*t*r)/100;
+     var total=interest + principal;
     
- document.getElementById('result').innerHTML=interest;
+ document.getElementById('principal').innerHTML=p;
+     document.getElementById('rate').innerHTML=r;
+     document.getElementById('result').innerHTML=interest;
+     document.getElementById('result').innerHTML=total;
 }
