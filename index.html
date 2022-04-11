@@ -39,10 +39,10 @@
         let t=document.getElementById('time').value;
         let r=document.getElementById('rate').value;
 
-        let  SI=(p*t*r)/100;
-        let total= SI + amount;
+        let  SI=((p*t*r)/100)+p;
+       
 
-        document.getElementById('si').innerHTML="The Total Simple Intrest Is: "+total;
+        document.getElementById('si').innerHTML="The Total Simple Intrest Is: "+ SI;
     }
 </script>
 </html>
