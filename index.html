@@ -1,48 +1,37 @@
-<html lang="en">
-<head>
+<html>
+    <head>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Interest Calculator</title>
-</head>
-<body>
-    <div class="container">
+    </head>
+    <body>
         <h1>Simple Interest Calculator</h1>
-        <div class="inpSection">
-            <div class="amt">
-                <label for="amount">Enter Total Amount:   </label>
-                <input type="number" name="amount" id="amount" placeholder="Enter Total Amount">
-            </div>
-            <div class="time">
-                <label for="time">Enter Time:   </label>
-                <input type="number" name="time" id="time" placeholder="Enter Time">
-            </div>
-            <div class="rate">
-                <label for="rate">Rate: </label>
-                <input type="number" name="rate" id="rate" placeholder="Enter Rate">
-            </div>
-            <div class="button">
-                <button onclick="Calculate()">Calculate</button>
-            </div>
-            <div class="result">
-                <h3 id="si"></h3>
-            </div>
-        </div>
-    </div>
+
+        Amount <input type="number"  id="principal">  <br/>
+        Rate <input type="number"  id="rate">  <br/>
+        No. of Years <input type="number"  id="years">  <br/>
+        
+
+        <button onclick="compute interest()">Compute</button><br>
+        
+        If you deposit  <span id="output_1"></span><br>
+        at an interest rate of <span id="output_2"></span><br>
+        in the year <span id="output_3"></span><br>
+        You will receive an amount of Interest : <span id="output_4"></span><br>
+        
     
-</body>
+   
+    </body>
 <script>
     function Calculate()
     {
-        let p=document.getElementById('amount').value;
-        let t=document.getElementById('time').value;
+        let p=document.getElementById('principal').value;
+        let t=document.getElementById('years').value;
         let r=document.getElementById('rate').value;
 
         let  SI= (p*t*r)/100;
        
 
-        document.getElementById('si').innerHTML="The Total Simple Intrest Is: "+ SI;
+        document.getElementById('output_4').innerHTML="The Total Simple Intrest Is: "+ SI;
     }
 </script>
 </html>
