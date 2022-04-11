@@ -4,7 +4,7 @@ function compute()
     t = document.getElementById("number").value;
     r = document.getElementById("rate").value;
     result=(p*t*r)/100;
-    document.getElementById('result').innerHTML="The Total Simple Intrest Is: "+result;
+    document.getElementById('result').innerHTML="result";
     
 }
         
